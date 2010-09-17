@@ -1,0 +1,153 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="3.5" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.21022</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{16646D9E-E713-4F11-84CF-48CA969AA3BF}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>hiMapNet</RootNamespace>
+    <AssemblyName>hiMapNet</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <StartupObject>
+    </StartupObject>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <OutputPath>bin\x86\Debug\</OutputPath>
+    <DefineConstants>TRACE;DEBUG</DefineConstants>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <OutputPath>bin\x86\Release\</OutputPath>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Coordinates\AffineTransform.cs" />
+    <Compile Include="Coordinates\CoordConverter.cs" />
+    <Compile Include="Coordinates\CoordSys.cs" />
+    <Compile Include="Coordinates\CoordSysFactory.cs" />
+    <Compile Include="Coordinates\CoordSysType.cs" />
+    <Compile Include="Coordinates\Datum.cs" />
+    <Compile Include="Coordinates\DatumID.cs" />
+    <Compile Include="Coordinates\DisplayTransform.cs" />
+    <Compile Include="DPoint.cs" />
+    <Compile Include="DRect.cs" />
+    <Compile Include="Ellipsoid.cs" />
+    <Compile Include="FeatureClasses\BitmapFeature.cs" />
+    <Compile Include="FeatureClasses\Feature.cs" />
+    <Compile Include="FeatureClasses\Part.cs" />
+    <Compile Include="FeatureClasses\PolygonFeature.cs" />
+    <Compile Include="FeatureClasses\PolylineFeature.cs" />
+    <Compile Include="FeatureClasses\RectangleFeature.cs" />
+    <Compile Include="FeatureClasses\SymbolFeature.cs" />
+    <Compile Include="FeatureClasses\TextFeature.cs" />
+    <Compile Include="FeaturesContainer\FeatureFactory.cs" />
+    <Compile Include="FeaturesContainer\FeatureProcessor.cs" />
+    <Compile Include="FeaturesContainer\FeaturesContainer.cs" />
+    <Compile Include="hiMapNet.cs" />
+    <Compile Include="Layer\LayerAbstract.cs" />
+    <Compile Include="MapTools\MapTool.cs" />
+    <Compile Include="Layer\Layers.cs" />
+    <Compile Include="Layer\LayerTiles.cs" />
+    <Compile Include="Layer\LayerTilesAsynch.cs" />
+    <Compile Include="Layer\LayerVectors.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="LPoint.cs" />
+    <Compile Include="LRect.cs" />
+    <Compile Include="Map.cs" />
+    <Compile Include="MapControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="MapControl.Designer.cs">
+      <DependentUpon>MapControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MapTools\MapToolInfo.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="MapControl.resx">
+      <DependentUpon>MapControl.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="ClassDiagram1.cd" />
+    <None Include="ClassDiagram2.cd" />
+    <None Include="ClassDiagram3.cd" />
+    <None Include="FeaturesContainer\FeaturesContainer.cd" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="RenderGDI.cs" />
+    <Compile Include="RenderGDIplus.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Style.cs" />
+    <Compile Include="MapTools\MapToolAddEdit.cs" />
+    <Compile Include="MapTools\MapTools.cs" />
+    <Compile Include="Undo\UndoElementPrimitive.cs" />
+    <Compile Include="Undo\UndoElementType.cs" />
+    <Compile Include="Undo\UndoManager.cs" />
+    <Compile Include="Undo\UndoElement.cs" />
+    <Compile Include="win32\ErrorCodes.cs" />
+    <Compile Include="win32\GDI.cs" />
+    <Compile Include="win32\Kernel.cs" />
+    <Compile Include="win32\Shell.cs" />
+    <Compile Include="win32\User.cs" />
+    <Compile Include="win32\Win32.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\GMap\GMap.NET.Core\GMap.NET.Core.csproj">
+      <Project>{D0C39D9D-BED0-418B-9A5E-713176CAF40C}</Project>
+      <Name>GMap.NET.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\GMap\GMap.NET.WindowsForms\GMap.NET.WindowsForms.csproj">
+      <Project>{E06DEF77-F933-42FB-AFD7-DB2D0D8D6A98}</Project>
+      <Name>GMap.NET.WindowsForms</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\marker_greenA.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

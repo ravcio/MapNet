@@ -1,0 +1,302 @@
+﻿<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="3.5">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.21022</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{421813B1-A007-44B2-8C53-32751C45113E}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>GMap.NET.WindowsMobile</RootNamespace>
+    <AssemblyName>GMap.NET.WindowsMobile</AssemblyName>
+    <ProjectTypeGuids>{4D628B5B-2FBC-4AA6-8C16-197242AEB884};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <PlatformFamilyName>PocketPC</PlatformFamilyName>
+    <PlatformID>b2c48bd2-963d-4549-9169-1fa021dce484</PlatformID>
+    <OSVersion>5.2</OSVersion>
+    <DeployDirSuffix>GMap.NET</DeployDirSuffix>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <NativePlatformName>Windows Mobile 6 Professional SDK</NativePlatformName>
+    <FormFactorID>
+    </FormFactorID>
+    <SignAssembly>true</SignAssembly>
+    <AssemblyOriginatorKeyFile>sn.snk</AssemblyOriginatorKeyFile>
+    <DeployDirPrefix>%25CSIDL_PROGRAM_FILES%25</DeployDirPrefix>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>TRACE;DEBUG;PocketPC; MONOdisabled; MySQLdisabled; SQLite; DESIGNdisabled</DefineConstants>
+    <NoStdLib>true</NoStdLib>
+    <NoConfig>true</NoConfig>
+    <ErrorReport>prompt</ErrorReport>
+    <FileAlignment>512</FileAlignment>
+    <WarningLevel>4</WarningLevel>
+    <GenerateSerializationAssemblies>Off</GenerateSerializationAssemblies>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>none</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE;PocketPC; MONOdisabled; MySQLdisabled; SQLite; DESIGNdisabled</DefineConstants>
+    <NoStdLib>true</NoStdLib>
+    <NoConfig>true</NoConfig>
+    <ErrorReport>prompt</ErrorReport>
+    <FileAlignment>512</FileAlignment>
+    <WarningLevel>4</WarningLevel>
+    <GenerateSerializationAssemblies>Off</GenerateSerializationAssemblies>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="mscorlib" />
+    <Reference Include="OpenNETCF, Version=2.2.0.0, Culture=neutral, PublicKeyToken=e60dbea84bb431b7, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\References\CompactFramework\OpenNETCF.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.SqlClient, Version=3.0.3600.0, Culture=neutral, PublicKeyToken=3be235df1c8d2ad3, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\References\CompactFramework\System.Data.SqlClient.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Data.SQLite, Version=1.0.65.0, Culture=neutral, PublicKeyToken=1fdb50b1b62b4c84, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\References\CompactFramework\System.Data.SQLite.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Data.SqlServerCe, Version=3.5.1.0, Culture=neutral, PublicKeyToken=3be235df1c8d2ad3, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\References\CompactFramework\System.Data.SqlServerCe.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="..\GMap.NET.Core\GMap.NET.CacheProviders\MSSQLCEPureImageCache.cs">
+      <Link>GMap.NET.CacheProviders\MSSQLCEPureImageCache.cs</Link>
+    </Compile>
+    <Compile Include="..\GMap.NET.Core\GMap.NET.CacheProviders\MSSQLPureImageCache.cs">
+      <Link>GMap.NET.CacheProviders\MSSQLPureImageCache.cs</Link>
+    </Compile>
+    <Compile Include="..\GMap.NET.Core\GMap.NET.CacheProviders\SQLitePureImageCache.cs">
+      <Link>GMap.NET.CacheProviders\SQLitePureImageCache.cs</Link>
+    </Compile>
+    <Compile Include="..\GMap.NET.Core\GMap.NET.Internals\Cache.cs">
+      <Link>GMap.NET.Internals\Cache.cs</Link>
+    </Compile>
+    <Compile Include="..\GMap.NET.Core\GMap.NET.Internals\CacheQueue.cs">
+      <Link>GMap.NET.Internals\CacheQueue.cs</Link>
+    </Compile>
+    <Compile Include="..\GMap.NET.Core\GMap.NET.Internals\Core.cs">
+      <Link>GMap.NET.Internals\Core.cs</Link>
+    </Compile>
+    <Compile Include="..\GMap.NET.Core\GMap.NET.Internals\KiberTileCache.cs">
+      <Link>GMap.NET.Internals\KiberTileCache.cs</Link>
+    </Compile>
+    <Compile Include="..\GMap.NET.Core\GMap.NET.Internals\LoadTask.cs">
+      <Link>GMap.NET.Internals\LoadTask.cs</Link>
+    </Compile>
+    <Compile Include="..\GMap.NET.Core\GMap.NET.Internals\PureImage.cs">
+      <Link>GMap.NET.Internals\PureImage.cs</Link>
+    </Compile>
+    <Compile Include="..\GMap.NET.Core\GMap.NET.Internals\RawTile.cs">
+      <Link>GMap.NET.Internals\RawTile.cs</Link>
+    </Compile>
+    <Compile Include="..\GMap.NET.Core\GMap.NET.Internals\Stuff.cs">
+      <Link>GMap.NET.Internals\Stuff.cs</Link>
+    </Compile>
+    <Compile Include="..\GMap.NET.Core\GMap.NET.Internals\Tile.cs">
+      <Link>GMap.NET.Internals\Tile.cs</Link>
+    </Compile>
+    <Compile Include="..\GMap.NET.Core\GMap.NET.Internals\TileMatrix.cs">
+      <Link>GMap.NET.Internals\TileMatrix.cs</Link>
+    </Compile>
+    <Compile Include="..\GMap.NET.Core\GMap.NET.Projections\MapsLTProjection.cs">
+      <Link>GMap.NET.Projections\MapsLTProjection.cs</Link>
+    </Compile>
+    <Compile Include="..\GMap.NET.Core\GMap.NET.Projections\MercatorProjection.cs">
+      <Link>GMap.NET.Projections\MercatorProjection.cs</Link>
+    </Compile>
+    <Compile Include="..\GMap.NET.Core\GMap.NET.Projections\MercatorProjectionYandex.cs">
+      <Link>GMap.NET.Projections\MercatorProjectionYandex.cs</Link>
+    </Compile>
+    <Compile Include="..\GMap.NET.Core\GMap.NET.Projections\PlateCarreeProjection.cs">
+      <Link>GMap.NET.Projections\PlateCarreeProjection.cs</Link>
+    </Compile>
+    <Compile Include="..\GMap.NET.Core\GMap.NET.Projections\PlateCarreeProjectionPergo.cs">
+      <Link>GMap.NET.Projections\PlateCarreeProjectionPergo.cs</Link>
+    </Compile>
+    <Compile Include="..\GMap.NET.Core\GMap.NET\AccessMode.cs">
+      <Link>GMap.NET\AccessMode.cs</Link>
+    </Compile>
+    <Compile Include="..\GMap.NET.Core\GMap.NET\Delegates.cs">
+      <Link>GMap.NET\Delegates.cs</Link>
+    </Compile>
+    <Compile Include="..\GMap.NET.Core\GMap.NET\GeoCoderStatusCode.cs">
+      <Link>GMap.NET\GeoCoderStatusCode.cs</Link>
+    </Compile>
+    <Compile Include="..\GMap.NET.Core\GMap.NET\GMaps.cs">
+      <Link>GMap.NET\GMaps.cs</Link>
+    </Compile>
+    <Compile Include="..\GMap.NET.Core\GMap.NET\GpsLog.cs">
+      <Link>GMap.NET\GpsLog.cs</Link>
+    </Compile>
+    <Compile Include="..\GMap.NET.Core\GMap.NET\gpx.cs">
+      <Link>GMap.NET\gpx.cs</Link>
+    </Compile>
+    <Compile Include="..\GMap.NET.Core\GMap.NET\IGControl.cs">
+      <Link>GMap.NET\IGControl.cs</Link>
+    </Compile>
+    <Compile Include="..\GMap.NET.Core\GMap.NET\LanguageType.cs">
+      <Link>GMap.NET\LanguageType.cs</Link>
+    </Compile>
+    <Compile Include="..\GMap.NET.Core\GMap.NET\MapRoute.cs">
+      <Link>GMap.NET\MapRoute.cs</Link>
+    </Compile>
+    <Compile Include="..\GMap.NET.Core\GMap.NET\MapType.cs">
+      <Link>GMap.NET\MapType.cs</Link>
+    </Compile>
+    <Compile Include="..\GMap.NET.Core\GMap.NET\MouseWheelZoomType.cs">
+      <Link>GMap.NET\MouseWheelZoomType.cs</Link>
+    </Compile>
+    <Compile Include="..\GMap.NET.Core\GMap.NET\Placemark.cs">
+      <Link>GMap.NET\Placemark.cs</Link>
+    </Compile>
+    <Compile Include="..\GMap.NET.Core\GMap.NET\Point.cs">
+      <Link>GMap.NET\Point.cs</Link>
+    </Compile>
+    <Compile Include="..\GMap.NET.Core\GMap.NET\PointLatLng.cs">
+      <Link>GMap.NET\PointLatLng.cs</Link>
+    </Compile>
+    <Compile Include="..\GMap.NET.Core\GMap.NET\PureImageCache.cs">
+      <Link>GMap.NET\PureImageCache.cs</Link>
+    </Compile>
+    <Compile Include="..\GMap.NET.Core\GMap.NET\PureProjection.cs">
+      <Link>GMap.NET\PureProjection.cs</Link>
+    </Compile>
+    <Compile Include="..\GMap.NET.Core\GMap.NET\Rectangle.cs">
+      <Link>GMap.NET\Rectangle.cs</Link>
+    </Compile>
+    <Compile Include="..\GMap.NET.Core\GMap.NET\RectLatLng.cs">
+      <Link>GMap.NET\RectLatLng.cs</Link>
+    </Compile>
+    <Compile Include="..\GMap.NET.Core\GMap.NET\RenderMode.cs">
+      <Link>GMap.NET\RenderMode.cs</Link>
+    </Compile>
+    <Compile Include="..\GMap.NET.Core\GMap.NET\Singleton.cs">
+      <Link>GMap.NET\Singleton.cs</Link>
+    </Compile>
+    <Compile Include="..\GMap.NET.Core\GMap.NET\Size.cs">
+      <Link>GMap.NET\Size.cs</Link>
+    </Compile>
+    <Compile Include="..\GMap.NET.Core\GMap.NET\SizeLatLng.cs">
+      <Link>GMap.NET\SizeLatLng.cs</Link>
+    </Compile>
+    <Compile Include="..\GMap.NET.Core\GMap.NET\VehicleData.cs">
+      <Link>GMap.NET\VehicleData.cs</Link>
+    </Compile>
+    <Compile Include="..\GMap.NET.WindowsForms\GMap.NET.ObjectModel\ObservableCollection.cs">
+      <Link>GMap.NET.ObjectModel\ObservableCollection.cs</Link>
+    </Compile>
+    <Compile Include="..\GMap.NET.WindowsForms\GMap.NET.ObjectModel\ObservableCollectionThreadSafe.cs">
+      <Link>GMap.NET.ObjectModel\ObservableCollectionThreadSafe.cs</Link>
+    </Compile>
+    <Compile Include="..\GMap.NET.WindowsForms\GMap.NET.WindowsForms\GMapControl.cs">
+      <Link>GMap.NET.WindowsForms\GMapControl.cs</Link>
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="..\GMap.NET.WindowsForms\GMap.NET.WindowsForms\GMapMarker.cs">
+      <Link>GMap.NET.WindowsForms\GMapMarker.cs</Link>
+    </Compile>
+    <Compile Include="..\GMap.NET.WindowsForms\GMap.NET.WindowsForms\GMapOverlay.cs">
+      <Link>GMap.NET.WindowsForms\GMapOverlay.cs</Link>
+    </Compile>
+    <Compile Include="..\GMap.NET.WindowsForms\GMap.NET.WindowsForms\GMapPolygon.cs">
+      <Link>GMap.NET.WindowsForms\GMapPolygon.cs</Link>
+    </Compile>
+    <Compile Include="..\GMap.NET.WindowsForms\GMap.NET.WindowsForms\GMapRoute.cs">
+      <Link>GMap.NET.WindowsForms\GMapRoute.cs</Link>
+    </Compile>
+    <Compile Include="..\GMap.NET.WindowsForms\GMap.NET.WindowsForms\GMapToolTip.cs">
+      <Link>GMap.NET.WindowsForms\GMapToolTip.cs</Link>
+    </Compile>
+    <Compile Include="..\GMap.NET.WindowsForms\GMap.NET.WindowsForms\Markers\GMapMarkerCross.cs">
+      <Link>GMap.NET.WindowsForms\Markers\GMapMarkerCross.cs</Link>
+    </Compile>
+    <Compile Include="..\GMap.NET.WindowsForms\GMap.NET.WindowsForms\Markers\GMapMarkerGoogleGreen.cs">
+      <Link>GMap.NET.WindowsForms\Markers\GMapMarkerGoogleGreen.cs</Link>
+    </Compile>
+    <Compile Include="..\GMap.NET.WindowsForms\GMap.NET.WindowsForms\Markers\GMapMarkerGoogleRed.cs">
+      <Link>GMap.NET.WindowsForms\Markers\GMapMarkerGoogleRed.cs</Link>
+    </Compile>
+    <Compile Include="..\GMap.NET.WindowsForms\GMap.NET.WindowsForms\ToolTips\GMapBaloonToolTip.cs">
+      <Link>GMap.NET.WindowsForms\ToolTips\GMapBaloonToolTip.cs</Link>
+    </Compile>
+    <Compile Include="..\GMap.NET.WindowsForms\GMap.NET.WindowsForms\ToolTips\GMapRoundedToolTip.cs">
+      <Link>GMap.NET.WindowsForms\ToolTips\GMapRoundedToolTip.cs</Link>
+    </Compile>
+    <Compile Include="..\GMap.NET.WindowsForms\GMap.NET.WindowsForms\WindowsFormsImage.cs">
+      <Link>GMap.NET.WindowsForms\WindowsFormsImage.cs</Link>
+    </Compile>
+    <Compile Include="GMap.NET.GPS\DegreesMinutesSeconds.cs" />
+    <Compile Include="GMap.NET.GPS\DeviceStateChangedEventArgs.cs" />
+    <Compile Include="GMap.NET.GPS\GPS.cs" />
+    <Compile Include="GMap.NET.GPS\GpsDeviceState.cs" />
+    <Compile Include="GMap.NET.GPS\GpsPosition.cs" />
+    <Compile Include="GMap.NET.GPS\LocationChangedEventArgs.cs" />
+    <Compile Include="GMap.NET.GPS\Utils.cs" />
+    <Compile Include="GMap.NET.Internals\Native.cs" />
+    <Compile Include="GMap.NET.WindowsForms\Markers\GMapMarkerTransparent.cs" />
+    <Compile Include="GMap.NET.WindowsForms\Markers\GMapMarkerTransparentGoogleGreen.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="System.ComponentModel\Attributes.cs" />
+    <Compile Include="GMap.NET.Internals\FastReaderWriterLock.cs" />
+    <Service Include="{94E38DFF-614B-4cbd-B67C-F211BB35CE8B}" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="sn.snk" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Resources\bigMarkerGreen.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\drag_cross_67_16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\marker.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="DesignTime.xmta" />
+    <EmbeddedResource Include="Resources\shadow50.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CompactFramework.CSharp.targets" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}">
+        <HostingProcess disable="1" />
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
