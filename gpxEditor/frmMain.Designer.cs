@@ -28,9 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.TreeNode treeNode1 = new System.Windows.Forms.TreeNode("Node0");
-            System.Windows.Forms.TreeNode treeNode2 = new System.Windows.Forms.TreeNode("Node1");
-            System.Windows.Forms.TreeNode treeNode3 = new System.Windows.Forms.TreeNode("Node2");
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmMain));
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.fileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -83,7 +80,6 @@
             this.aboutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
             this.treeView1 = new System.Windows.Forms.TreeView();
-            this.mapControl1 = new hiMapNet.MapControl();
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
             this.toolStripButton_Open = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
@@ -106,6 +102,7 @@
             this.lblSelection = new System.Windows.Forms.ToolStripStatusLabel();
             this.gpxScrollBar = new System.Windows.Forms.HScrollBar();
             this.timeSlide1 = new TimeSlideControl.TimeSlide();
+            this.mapControl1 = new hiMapNet.MapControl();
             this.menuStrip1.SuspendLayout();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
@@ -510,34 +507,8 @@
             this.treeView1.HideSelection = false;
             this.treeView1.Location = new System.Drawing.Point(0, 0);
             this.treeView1.Name = "treeView1";
-            treeNode1.Name = "Node0";
-            treeNode1.Text = "Node0";
-            treeNode2.Name = "Node1";
-            treeNode2.Text = "Node1";
-            treeNode3.Name = "Node2";
-            treeNode3.Text = "Node2";
-            this.treeView1.Nodes.AddRange(new System.Windows.Forms.TreeNode[] {
-            treeNode1,
-            treeNode2,
-            treeNode3});
             this.treeView1.Size = new System.Drawing.Size(148, 294);
             this.treeView1.TabIndex = 0;
-            // 
-            // mapControl1
-            // 
-            this.mapControl1.BackColor = System.Drawing.Color.White;
-            this.mapControl1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.mapControl1.CurrentTool = hiMapNet.MapControl.ToolConst.CustomToolProcessor;
-            this.mapControl1.CurrentToolProcessor = null;
-            this.mapControl1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.mapControl1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.mapControl1.Location = new System.Drawing.Point(0, 0);
-            this.mapControl1.Name = "mapControl1";
-            this.mapControl1.ResizeScaleMode = hiMapNet.MapControl.ResizeScaleConst.NoChange;
-            this.mapControl1.Size = new System.Drawing.Size(661, 294);
-            this.mapControl1.TabIndex = 0;
-            this.mapControl1.MouseMove += new System.Windows.Forms.MouseEventHandler(this.mapControl1_MouseMove);
-            this.mapControl1.MouseClick += new System.Windows.Forms.MouseEventHandler(this.mapControl1_MouseClick);
             // 
             // toolStrip1
             // 
@@ -749,6 +720,22 @@
             this.timeSlide1.TabIndex = 19;
             this.timeSlide1.ValueMarker = new System.DateTime(1, 1, 1, 0, 5, 0, 0);
             this.timeSlide1.ValueStart = new System.DateTime(((long)(0)));
+            // 
+            // mapControl1
+            // 
+            this.mapControl1.BackColor = System.Drawing.Color.White;
+            this.mapControl1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.mapControl1.CurrentTool = hiMapNet.MapControl.ToolConst.CustomToolProcessor;
+            this.mapControl1.CurrentToolProcessor = null;
+            this.mapControl1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.mapControl1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.mapControl1.Location = new System.Drawing.Point(0, 0);
+            this.mapControl1.Name = "mapControl1";
+            this.mapControl1.ResizeScaleMode = hiMapNet.MapControl.ResizeScaleConst.NoChange;
+            this.mapControl1.Size = new System.Drawing.Size(661, 294);
+            this.mapControl1.TabIndex = 0;
+            this.mapControl1.MouseMove += new System.Windows.Forms.MouseEventHandler(this.mapControl1_MouseMove);
+            this.mapControl1.MouseClick += new System.Windows.Forms.MouseEventHandler(this.mapControl1_MouseClick);
             // 
             // frmMain
             // 
