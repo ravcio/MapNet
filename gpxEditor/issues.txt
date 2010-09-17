@@ -1,0 +1,22 @@
+- precyzyjnie zaznaczanie obiektów
+- odswie¿anie treeview
+- zaznaczanie na treeview
++ invers selection nie dziala na features
++ naprawic mechanizm undo (test case: move inside point, remove it, undo, undo act: not complete undo)
+- style of objects and selection
++ gpx properties
+- info tool
+- sklejanie plików , trackow i segmentów
+- refactoring - feature 
+
+Layer.FeatureAdd
+Layer.FeatureRemove
+Layer.FeatureGet
+Layer.FeatureCount
+
+Layer.FeatureInsertAt  - needed by Undo
+
+Layer.FeatureSelect
+Layer.FeatureUnselect
+Layer.PointSelect
+Layer.PointUnselect
